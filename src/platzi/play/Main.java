@@ -18,8 +18,12 @@ public class Main {
         pelicula.calificar(4.7);
         pelicula.duracion = 120;
 
+        //casteo implicito: "long" es un "int" mas grande
         long duracionLong = pelicula.duracion;
+        //casteo explicito: el tipo de variable origen (double) no cabe por default en el destino (int)
         int calificacionInt = (int) pelicula.calificacion;
+        //casteo explicito de Long a int <-> pdtt: Long.parseLong transf de String a tipo long
+        //el int tiene un rango definido
         int numeroDePremios = (int) Long.parseLong("25000000000");
 
         System.out.println("Duracion Long: " + duracionLong);
