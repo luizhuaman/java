@@ -7,6 +7,7 @@ public class Pelicula {
     public String descripcion;
     public int duracion;
     public String genero;
+    //Con la version moderna de java 8 ya no se usa el tipo de dato Date -> LocalDate
     public LocalDate fechaEstreno;
     public double calificacion;
     public boolean disponible;

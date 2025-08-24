@@ -21,6 +21,10 @@ public class Main {
         usuario.nombre = "Juan";
         usuario.fechaRegistro = LocalDateTime.of(2025, 12, 24, 17, 15, 14);
 
+        System.out.println("Pelicula Ficha Tecnica");
+        System.out.println(pelicula.obtenerFichaTecnica());
+        System.out.println("\n" +
+                "Usuario Fecha Registro");
         System.out.println(usuario.fechaRegistro);
 
         usuario.ver(pelicula);
