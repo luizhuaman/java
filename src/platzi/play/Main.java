@@ -9,12 +9,16 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("PLATZI PLAY 🍿");
 
+        //instanciamos nuestro objeto desde la clase creada en pelicula.java
         Pelicula pelicula = new Pelicula();
         pelicula.titulo = "El señor de los anillos";
         pelicula.anioEstreno = 2001;
         pelicula.genero = "Fantasía";
-        pelicula.calificar(4.7);
+        pelicula.calificar(4.7); //usamos nuestro metodo
 
+        System.out.println(pelicula.obtenerFichaTecnica());
+
+        //instanciamos nuestro objeto usuario desde la clase creada en Usuario.java
         Usuario usuario = new Usuario();
         usuario.nombre = "Juan";
 

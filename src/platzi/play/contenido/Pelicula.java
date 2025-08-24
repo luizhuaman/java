@@ -9,6 +9,7 @@ public class Pelicula {
     public double calificacion;
     public boolean disponible;
 
+    //metodos son acciones (verbos)
     public void reproducir() {
         System.out.println("Reproduciendo " + titulo);
     }
@@ -19,6 +20,7 @@ public class Pelicula {
                 "Calificación: " + calificacion + "/5";
     }
 
+    // this.calificacion hace referencia al atributo del objeto y calificacion al valor entrante
     public void calificar(double calificacion) {
         if (calificacion >= 0 && calificacion <= 5) {
             this.calificacion = calificacion;
