@@ -11,6 +11,9 @@ public class Pelicula {
     public double calificacion;
     public boolean disponible;
 
+    //B.P. las clases deben tener un constructor que reciba los parametros
+    // que ese objeto debe tener desde su nacimiento
+    //constructor: inicializar valores de un objeto en su creacion
     public Pelicula(String titulo, int duracion, String genero) {
         this.titulo = titulo;
         this.duracion = duracion;
@@ -19,6 +22,7 @@ public class Pelicula {
         this.disponible = true;
     }
 
+    //Este constructor es mas completo porque tbn tiene su calificacion
     public Pelicula(String titulo, int duracion, String genero, double calificacion) {
         this(titulo, duracion, genero);
         this.calificar(calificacion);

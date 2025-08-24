@@ -20,6 +20,7 @@ public class Main {
         int duracion = ScannerUtils.capturarNumero("Duracion del contenido");
         double calificacion = ScannerUtils.capturarDecimal("Calificacion del contenido");
 
+        //constructor: inicializar mi objeto Pelicula con los atributos con los parametros claves
         Pelicula pelicula = new Pelicula(nombre, duracion, genero, calificacion);
 
         System.out.println(pelicula.obtenerFichaTecnica());
