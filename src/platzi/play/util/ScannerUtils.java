@@ -3,6 +3,7 @@ package platzi.play.util;
 import java.util.Scanner;
 
 public class ScannerUtils {
+    //Este atributo es una constante llamda "SCANNER"
     public static final Scanner SCANNER = new Scanner(System.in);
 
     public static String capturarTexto(String mensaje) {
