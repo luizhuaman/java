@@ -12,7 +12,7 @@ public class ScannerUtils {
 
     public static int capturarNumero(String mensaje) {
         System.out.println(mensaje + ": ");
-
+        //validamos que la opcion ingresada sea un entero
         while (!SCANNER.hasNextInt()) {
             System.out.println("Dato no aceptado. " + mensaje + ": ");
             SCANNER.next();
@@ -25,7 +25,7 @@ public class ScannerUtils {
 
     public static double capturarDecimal(String mensaje) {
         System.out.println(mensaje + ": ");
-
+        // Si no es un double lo descarto con este while
         while (!SCANNER.hasNextDouble()) {
             System.out.println("Dato no aceptado. " + mensaje + ": ");
             SCANNER.next();

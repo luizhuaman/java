@@ -35,4 +35,8 @@ public class Plataforma {
     public List<Pelicula> getContenido() {
         return contenido;
     }
+
+    public Pelicula buscarPorTitulo(String nombreBuscado) {
+        return null;
+    }
 }

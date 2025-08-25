@@ -38,6 +38,7 @@ public class Main {
                     int duracion = ScannerUtils.capturarNumero("Duracion del contenido");
                     double calificacion = ScannerUtils.capturarDecimal("Calificacion del contenido");
 
+                    // la instancia de la pelicula la enviamos de frente
                     plataforma.agregar(new Pelicula(nombre, duracion, genero, calificacion));
                 }
                 case MOSTRAR_TODO -> plataforma.mostrarTitulos();
