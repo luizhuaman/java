@@ -21,6 +21,8 @@ public class Plataforma {
 
     public List<String> getTitulos() {
         return contenido.stream()
+                //el mapa me permite transformar en otro elemento distinto del objeto
+                //es una funcion que pemite cambiar la referencia
                 .map(Pelicula::getTitulo)
                 .toList();
     }
@@ -51,6 +53,7 @@ public class Plataforma {
 
     public int getDuracionTotal() {
         return contenido.stream()
+                // mapToInt es para obtener un entero
                 .mapToInt(Pelicula::getDuracion)
                 .sum();
     }

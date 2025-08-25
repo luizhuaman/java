@@ -49,6 +49,7 @@ public class Main {
                 }
                 case MOSTRAR_TODO -> {
                     List<String> titulos = plataforma.getTitulos();
+                    // :: significa un metodo de referencia
                     titulos.forEach(System.out::println);
                 }
                 case BUSCAR_POR_TITULO -> {
