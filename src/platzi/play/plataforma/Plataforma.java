@@ -7,7 +7,8 @@ import java.util.List;
 
 public class Plataforma {
     private String nombre;
-    private List<Pelicula> contenido; // Agregación
+    private List<Pelicula> contenido; // Agregación: PUEDEN EXISTIR POR FUERA DE LA PLATAFORMA
+    //private List<Peliculas> categorias //Ejemplo de AGREGACION DE CLASES
 
     public Plataforma(String nombre) {
         this.nombre = nombre;

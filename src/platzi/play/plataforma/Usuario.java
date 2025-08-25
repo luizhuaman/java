@@ -14,7 +14,7 @@ public class Usuario {
         this.email = email;
         this.fechaRegistro = LocalDateTime.now();
     }
-
+    //ejemplo de ASOCIACION DE CLASES
     public void ver(Pelicula pelicula) {
         System.out.println(nombre + " está viendo...");
         pelicula.reproducir();
