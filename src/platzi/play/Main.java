@@ -20,6 +20,10 @@ public class Main {
         int duracion = ScannerUtils.capturarNumero("Duracion del contenido");
         double calificacion = ScannerUtils.capturarDecimal("Calificacion del contenido");
 
+        // Cada vez que usamos "new" se almacena en memoria llamada heap
+        // Java tiene 2 zonas de memoria stack (save attr primitivos y referencias de los objects)
+        // y heap (save objects in memory)
+        // el garbage collector las borra de memoria
         Pelicula pelicula = new Pelicula(nombre, duracion, genero, calificacion);
 
         System.out.println(pelicula.obtenerFichaTecnica());
