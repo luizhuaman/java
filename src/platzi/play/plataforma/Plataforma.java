@@ -19,6 +19,7 @@ public class Plataforma {
     }
 
     public void mostrarTitulos() {
+        // un LAMBDA es una forma corta de escribir un metodo : Programacion Funcional
         contenido.forEach(contenido -> System.out.println(contenido.getTitulo()));
     }
 
@@ -27,6 +28,7 @@ public class Plataforma {
     }
 
     public Pelicula buscarPorTitulo(String titulo) {
+        // stream: una cinta transportadora que recorre una lista y nos permite realizar acciones
         return contenido.stream()
                 .filter(contenido -> contenido.getTitulo().equalsIgnoreCase(titulo))
                 .findFirst()
