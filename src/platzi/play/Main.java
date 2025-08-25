@@ -15,6 +15,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(NOMBRE_PLATAFORMA + " v" + VERSION);
 
+        // Encapsulamiento relacionado con la visibilidad de variables de la clase
+        // permite ocultar o proteger los detalles internos de una clase y controlar
+        // como se accede a esa informacion
         String nombre = ScannerUtils.capturarTexto("Nombre del contenido");
         String genero = ScannerUtils.capturarTexto("Genero del contenido");
         int duracion = ScannerUtils.capturarNumero("Duracion del contenido");

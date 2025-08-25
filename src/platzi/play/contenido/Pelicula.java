@@ -3,6 +3,7 @@ package platzi.play.contenido;
 import java.time.LocalDate;
 
 public class Pelicula {
+    //La idea es colocar en privado para que no puedan acceder a la variables directamente
     private String titulo;
     private String descripcion;
     private int duracion;
@@ -52,6 +53,7 @@ public class Pelicula {
         return descripcion;
     }
 
+    //los booleanos se le coloca "is" en vez de "get"
     public boolean isDisponible() {
         return disponible;
     }
