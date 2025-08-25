@@ -18,6 +18,7 @@ public class Main {
         Plataforma plataforma = new Plataforma(NOMBRE_PLATAFORMA);
         System.out.println(NOMBRE_PLATAFORMA + " v" + VERSION);
 
+        // Inicializamos nuestro set de peliculas
         cargarPeliculas(plataforma);
 
         while (true) {
