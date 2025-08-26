@@ -5,6 +5,7 @@ import platzi.play.contenido.Pelicula;
 import java.util.ArrayList;
 import java.util.List;
 
+//Clase Plataforma
 public class Plataforma {
     private String nombre;
     //inicialiamos nuestra lista<attrPeliculaClas> llamada "contenido"
@@ -22,6 +23,7 @@ public class Plataforma {
     }
 
     public void mostrarTitulos() {
+        //para recorrer la lista contenido
         for (Pelicula pelicula : contenido) {
             System.out.println(pelicula.getTitulo());
             System.out.println(pelicula.getCalificacion());
