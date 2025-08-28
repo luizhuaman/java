@@ -31,6 +31,10 @@ public class Main {
                     5. Salir
                     """);
 
+            if (opcionElegida <= 0 || opcionElegida > 5) {
+                System.out.println("[WARNING] Opcion elegida no esta dentro de las opciones \n");
+            }
+
             switch (opcionElegida) {
                 case AGREGAR -> {
                     String nombre = ScannerUtils.capturarTexto("Nombre del contenido");
