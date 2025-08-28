@@ -15,6 +15,7 @@ public class Main {
     public static final int SALIR = 5;
 
     public static void main(String[] args) {
+        //Inicializa el objeto plataforma para usarlo en el main
         Plataforma plataforma = new Plataforma(NOMBRE_PLATAFORMA);
         System.out.println(NOMBRE_PLATAFORMA + " v" + VERSION);
 
@@ -31,6 +32,10 @@ public class Main {
                     5. Salir
                     """);
 
+            if (opcionElegida <= 0 || opcionElegida > 5) {
+                System.out.println("[WARNING] Opcion elegida no esta dentro de las opciones \n");
+            }
+
             switch (opcionElegida) {
                 case AGREGAR -> {
                     String nombre = ScannerUtils.capturarTexto("Nombre del contenido");
@@ -45,6 +50,7 @@ public class Main {
                     String nombreBuscado = ScannerUtils.capturarTexto("Nombre del contenido a buscar");
                     Pelicula contenido = plataforma.buscarPorTitulo(nombreBuscado);
 
+                    //lo retornado por el metodo de busqueda buscarPorTitulo lo comparamos con null.
                     if (contenido != null) {
                         System.out.println(contenido.obtenerFichaTecnica());
                     } else {
@@ -56,6 +62,8 @@ public class Main {
                     Pelicula contenido = plataforma.buscarPorTitulo(nombreAEliminar);
 
                     if (contenido != null) {
+                        //contenido es el objeto total
+                        System.out.println(contenido.obtenerFichaTecnica());
                         plataforma.eliminar(contenido);
                         System.out.println(nombreAEliminar + " eliminado! ❌");
                     } else {
