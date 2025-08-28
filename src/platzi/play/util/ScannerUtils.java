@@ -14,7 +14,7 @@ public class ScannerUtils {
         System.out.println(mensaje + ": ");
 
         while (!SCANNER.hasNextInt()) {
-            System.out.println("Dato no aceptado. " + mensaje + ": ");
+            System.out.println("[WARNING] Dato no aceptado. \n" + mensaje + ": ");
             SCANNER.next();
         }
 

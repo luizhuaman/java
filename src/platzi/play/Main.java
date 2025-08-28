@@ -16,6 +16,7 @@ public class Main {
     public static final int BUSCAR_POR_GENERO = 4;
     public static final int ELIMINAR = 8;
     public static final int SALIR = 9;
+    public static final List<Integer> OPTIONS = List.of(1, 2, 3, 4, 8, 9);
 
     public static void main(String[] args) {
         Plataforma plataforma = new Plataforma(NOMBRE_PLATAFORMA);
@@ -33,6 +34,10 @@ public class Main {
                     8. Eliminar
                     9. Salir
                     """);
+
+            if (OPTIONS.stream().anyMatch(opt -> opt != opcionElegida)) {
+                System.out.println("[WARNING] Opcion elegida no esta dentro de las opciones \n");
+            }
 
             switch (opcionElegida) {
                 case AGREGAR -> {
