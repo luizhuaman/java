@@ -5,6 +5,7 @@ import platzi.play.contenido.Pelicula;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.text.Normalizer;
 
 public class Plataforma {
     private String nombre;
@@ -39,8 +40,11 @@ public class Plataforma {
     }
 
     public List<Pelicula> buscarPorGenero(String genero) {
+        String generoBuscado = normalizarTexto(genero);
+
         return contenido.stream()
-                .filter(contenido -> contenido.getGenero().equalsIgnoreCase(genero))
+                .filter(contenido -> normalizarTexto(contenido.getGenero())
+                        .equalsIgnoreCase(generoBuscado))
                 .toList();
     }
 
@@ -64,5 +68,13 @@ public class Plataforma {
 
     public List<Pelicula> getContenido() {
         return contenido;
+    }
+
+    //Se agrego el metodo para obviar las tildes cuando realiza búsqueda
+    private String normalizarTexto(String texto) {
+        return Normalizer.normalize(texto, Normalizer.Form.NFD)
+                .replaceAll("\\p{M}", "")  // Remueve tildes/acentos
+                .toLowerCase()             // Convierte a minúsculas
+                .trim();                   // Remueve espacios
     }
 }
