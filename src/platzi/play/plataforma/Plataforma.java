@@ -25,6 +25,7 @@ public class Plataforma {
                 //el mapa me permite transformar en otro elemento distinto del objeto
                 //es una funcion que pemite cambiar la referencia
                 .map(Pelicula::getTitulo)
+                //collect toList
                 .toList();
     }
 
@@ -48,6 +49,7 @@ public class Plataforma {
                 .toList();
     }
 
+    //le pasamos la cantidad de peliculas que queremos mostrary con .limit mostramos
     public List<Pelicula> getPopulares(int cantidad) {
         return contenido.stream()
                 .sorted(Comparator.comparingDouble(Pelicula::getCalificacion).reversed())
@@ -60,6 +62,10 @@ public class Plataforma {
                 // mapToInt es para obtener un entero
                 .mapToInt(Pelicula::getDuracion)
                 .sum();
+    }
+
+    public int getTotalPeliculas() {
+        return contenido.size();
     }
 
     public String getNombre() {

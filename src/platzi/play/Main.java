@@ -25,9 +25,11 @@ public class Main {
 
         cargarPeliculas(plataforma);
 
-        System.out.println("Más de " + plataforma.getDuracionTotal() + " minutos de contenido! \n");
-
         while (true) {
+
+            System.out.println("Más de " + plataforma.getDuracionTotal() + " minutos de contenido! \n" +
+                    "y " + plataforma.getTotalPeliculas() + "Peliculas! 🚀🚀");
+
             int opcionElegida = ScannerUtils.capturarNumero("""
                     Ingrese una de las siguientes opciones:
                     1. Agregar contenido
@@ -41,7 +43,7 @@ public class Main {
 
             System.out.println(opcionElegida);
 
-            if (OPTION.stream().anyMatch(opt -> opt != opcionElegida)) {
+            if (OPTION.stream().noneMatch(opt -> opt == opcionElegida)) {
                 System.out.println("[WARNING] Opcion elegida no esta dentro de las opciones \n");
             }
 
@@ -73,7 +75,7 @@ public class Main {
                     String generoBuscado = ScannerUtils.capturarTexto("Genero del contenido a buscar");
 
                     List<Pelicula> contenidoPorGenero = plataforma.buscarPorGenero(generoBuscado);
-                    System.out.println(contenidoPorGenero.size() + " encontrados para el genero " + generoBuscado);
+                    System.out.println("\n" + contenidoPorGenero.size() + " encontrados para el genero \n" + generoBuscado);
                     contenidoPorGenero.forEach(contenido -> System.out.println(contenido.obtenerFichaTecnica() + "\n"));
                 }
                 case VER_POPULARES -> {
