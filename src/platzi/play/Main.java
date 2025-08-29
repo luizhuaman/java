@@ -35,7 +35,7 @@ public class Main {
                     9. Salir
                     """);
 
-            if (OPTIONS.stream().anyMatch(opt -> opt != opcionElegida)) {
+            if (OPTIONS.stream().noneMatch( opt ->  opt == opcionElegida)) {
                 System.out.println("[WARNING] Opcion elegida no esta dentro de las opciones \n");
             }
 
