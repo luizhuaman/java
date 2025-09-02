@@ -120,5 +120,7 @@ public class Main {
         plataforma.agregar(new Pelicula("Joker", 122, Genero.DRAMA));
         plataforma.agregar(new Pelicula("Toy Story", 81, Genero.ANIMADA, 4.5));
         plataforma.agregar(new Pelicula("Avengers: Endgame", 181, Genero.ACCION, 3.9));
+        plataforma.agregar(new Pelicula("Avatar", 190, Genero.CIENCIA_FICCION, 4.9));
+        plataforma.agregar(new Pelicula("Batman: Caballero de la noche", 150, Genero.ACCION, 5));
     }
 }

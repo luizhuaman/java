@@ -53,7 +53,7 @@ public class Plataforma {
 
     public List<ResumenContenido> getResumenes() {
         return contenido.stream()
-                .map(c -> new ResumenContenido(c.getTitulo(), c.getDuracion(), c.getGenero()))
+                .map(c -> new ResumenContenido(c.getTitulo(), c.getDuracion(), c.getGenero(), c.getCalificacion()))
                 .toList();
     }
 
