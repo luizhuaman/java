@@ -21,7 +21,7 @@ public class FileUtils {
             List<String> lineas = Files.readAllLines(Paths.get(NOMBRE_ARCHIVO));
 
             lineas.forEach(linea -> {
-                String[] datos = linea.split("\\" + SEPARADOR);
+                String[] datos = linea.split("\\" + SEPARADOR); //  \\ + | (para que lea el caracter especial)
 
                 if (datos.length == 5) {
                     String titulo = datos[0];
